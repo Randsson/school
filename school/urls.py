@@ -18,9 +18,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from students.views import StudentListView
+from products.views import ProductCreateView
 
 urlpatterns = [
     path('', StudentListView.as_view(), name='students_home'),
-    # path('students/', students_home, name='students_home'),
+    path('products/create/', ProductCreateView.as_view(), name='create_product'),
     path('admin/', admin.site.urls),
 ]
